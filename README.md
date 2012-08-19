@@ -2,14 +2,11 @@
 
 ## What is it?!
 
-ToyBox is a SoundCloud #wehack project.
-It started as a simple idea to be able to build a kid's toy that can stream sounds from SoundCloud.
-The main driver was to avoid being annoyed to hell by your kids' musical toys and instead having something fun that the whole family can get involved in.
-Imagine a toy that you (or perhaps grandparents, aunts or uncles) can program with your own voices, music or whatever funny sounds you can think of.
-Maybe you're on a business trip and you can record something special like a bedtime story.
-Your toddler comes up to the toy, shakes it, and out come's daddy's voice saying, "Stop shaking me!" or "Put me down!".
-From this simple idea, we threw in a bunch of sensors on an Arduino, a Raspberry Pi to handle all of the audio and a Heroku webapp for easy SoundCloud integration and remote configuration.
-Tie it all together with some Ruby and you've got yourself a hack ;)
+ToyBox is a SoundCloud #wehack project. It started as a simple idea to be able to build a kid's toy that can stream sounds from SoundCloud. The main driver was to avoid being annoyed to hell by your kids' musical toys and instead having something fun that the whole family can get involved in.
+
+Imagine a toy that you (or perhaps grandparents, aunts or uncles) can program with your own voices, music or whatever funny sounds you can think of. Maybe you're on a business trip and you can record something special like a bedtime story. Your toddler comes up to the toy, shakes it, and out come's daddy's voice saying, "Stop shaking me!" or "Put me down!". From this simple idea, we threw in a bunch of sensors on an Arduino, a Raspberry Pi to handle all of the audio and a Heroku webapp for easy SoundCloud integration and remote configuration. Tie it all together with some Ruby and you've got yourself a #wehack!
+
+Many thanks to all that contributed, provided support and beta tested.
 
 ## Contributors
 
