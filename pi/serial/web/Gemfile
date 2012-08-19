@@ -1,0 +1,13 @@
+source :rubygems
+
+gem 'macaddr'
+gem 'json'
+
+gem 'sinatra'
+gem 'ffi-rzmq', "0.9.3"
+gem 'eventmachine'
+gem 'em-websocket'
+gem 'em-zeromq'
+gem 'yajl-ruby'
+gem 'thin'
+gem 'haml'

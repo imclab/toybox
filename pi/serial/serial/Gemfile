@@ -1,0 +1,6 @@
+source :rubygems
+
+gem 'macaddr'
+gem 'json'
+gem 'serialport'
+gem 'ffi-rzmq'
