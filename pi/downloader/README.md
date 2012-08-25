@@ -1,4 +1,8 @@
-# Running
+# toybox:pi:downloader
+
+Downloader pulling config from Heroku webapp and storing locally for realtime playing.
+
+## Running
 
 ```shell
 ./downloader.rb
@@ -7,7 +11,7 @@
 * You can supply the ```-v``` parameter to get verbose output
 * It will drop its stuff in ```/tmp/toybox/```
 
-# Testing with a fake endpoint
+## Testing with a fake endpoint
 
 You can consider this also API documentation for what the toybox downloader
 expects.
@@ -18,7 +22,8 @@ rackup
 
 * It expects to find stuff in ```/tmp/trackserver/```
 
-## Requests
+## API
+
 ### GET /tracks/:id
 * Returns a JSON hash of the event/sound settings for the toybox:
  * keys are event labels

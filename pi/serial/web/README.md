@@ -1,4 +1,4 @@
-# toybox-serial:web
+# toybox:serial:web
 
 Web console for monitoring incoming serial events from the Arduino.
 

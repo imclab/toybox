@@ -1,9 +1,9 @@
-playback
-========
+# toybox:pi:playback
 
 An asynchronous playback wrapper around mplayer.
 
 ## Usage
+
 Drop it somewhere in your load path.
 
 ```ruby
@@ -20,6 +20,7 @@ Mplayer::kill()
 ```
 
 ## Notes/Caveats
+
 * Playbacks are asynchronous. Mplayer::play() WILL return immediately, and playback will continue in the background until you Mplayer::stop().
 * Only one audio stream can be played at a time. New plays will stop any previously playing track and start the new one.
 * It plays back tracks from ```/tmp/tracks/#{name}.mp3```
