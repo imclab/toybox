@@ -12,9 +12,10 @@ module Mplayer
     # Determine the path to the event mp3 and spawn mplayer to play it.
     file = File.expand_path(File.join(TRACK_BASE, "#{event}.mp3"))
 
-    puts "play: #{echo()} loadfile #{file} > #{fifo()} | file: #{File.exist?(file)} | #{running?}"
-
-    return false unless File.exist?(file)
+    if (!File.exist?(file))
+      puts "No file to play: #{file}"
+      return false
+    end
 
     # Load (play) the file after stopping any previous one
     stop()
