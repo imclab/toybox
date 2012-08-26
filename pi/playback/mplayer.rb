@@ -11,6 +11,9 @@ module Mplayer
   def play(event)
     # Determine the path to the event mp3 and spawn mplayer to play it.
     file = File.expand_path(File.join(TRACK_BASE, "#{event}.mp3"))
+
+    puts "play: #{echo()} loadfile #{file} > #{fifo()} | file: #{File.exist?(file)} | #{running?}"
+
     return false unless File.exist?(file)
 
     # Load (play) the file after stopping any previous one
@@ -79,8 +82,8 @@ module Mplayer
                   '-idle',         # run without immediately playing anything
                   '-input',        # listen on a FIFO for commands
                   "file=#{fifo()}",# the FIFO location
-                  '-ao',           # use this audio output
-                  'alsa:device=hw=0.0', # specifically for Raspberry Pi
+                  #'-ao',           # use this audio output
+                  #'alsa:device=hw=0.0', # specifically for Raspberry Pi
                   '-key-fifo-size',# limit the number of events we buffer
                   '5'              # ...to 4. This allows stop() to work.
                  )

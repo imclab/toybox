@@ -6,7 +6,7 @@ require 'haml'
 require 'sinatra/base'
 require 'thin'
 
-require '../../toybox-playback/mplayer.rb'
+require '../../playback/mplayer.rb'
 
 $stdout.sync = true
 

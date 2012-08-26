@@ -39,7 +39,7 @@ PLATFORMS
 DEPENDENCIES
   em-websocket
   em-zeromq
-  eventmachine
+  eventmachine (= 1.0.0.beta.4)
   ffi-rzmq (= 0.9.3)
   haml
   json

@@ -2,6 +2,15 @@
 
 An asynchronous playback wrapper around mplayer.
 
+## Requirements
+
+This requires `mplayer` to stream audio.
+
+```bash
+brew install mplayer # on OS X
+sudo apt-get install mplayer # on Linux distros w/ apt
+```
+
 ## Usage
 
 Drop it somewhere in your load path.

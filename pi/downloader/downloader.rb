@@ -17,7 +17,7 @@ SLEEP_PERIOD=60
 @track_cachefile = "#{LOCAL_STORAGE}/cache.json"
 
 # Logging/debugging
-@debug = false
+@debug = true
 def log(msg)
   @debug and STDERR.puts(msg)
 end
@@ -79,7 +79,12 @@ def download_tracks(queue)
   else
     queue.each do |event, track|
       log("Downloading #{track}")
-      download = Net::HTTP.get(URI.parse(get_redirect(track)))
+
+      redirected = get_redirect(track)
+      log("Redirected to: #{redirected}")
+      raise "No track to redirect download to!" unless redirected && !redirected.empty?
+
+      download = Net::HTTP.get(URI.parse(redirected))
       event_mp3 = File.join(LOCAL_STORAGE, "#{event}.mp3")
       log("Storing #{track} of #{download.length} bytes in #{event_mp3}")
       File.open(event_mp3, 'w') do |f|
@@ -178,6 +183,6 @@ if __FILE__ == $PROGRAM_NAME
     end
   end
   option_parser.parse!(ARGV)
-  
+
   main_loop()
 end
